@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Cafe</string>
+    <string name="app_name">Cafe app</string>
+    <string name="menu_item_name">Мокачино тройной</string>
+    <string name="cafe_menu_item_ingredients">Кофе свежемолотый, сливки, молоко, сахар, натуральный какао</string>
+    <string name="recommendation">Рекомендуем</string>
+    <string name="order_adding">Добавить в заказ</string>
+    <string name="price">450₽</string>
+    <string name="cafe_menu_item_ingredients1">Блины с ягодами и сгущенкой</string>
+    <string name="cafe_menu_item_ingredients2">Цезарь ролл</string>
+    <string name="cafe_menu_item_ingredients3">Американский сэндвич с тунцом</string>
+    <string name="plus">+</string>
+    <string name="back"><![CDATA[<]]></string>
 </resources>
