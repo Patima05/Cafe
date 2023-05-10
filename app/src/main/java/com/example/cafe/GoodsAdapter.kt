@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.cafe.databinding.ItemGoodBinding
 
 class GoodsAdapter(private val goods: List<GoodModel>): RecyclerView.Adapter<GoodsAdapter.GoodHolder>() {
@@ -14,7 +15,8 @@ class GoodsAdapter(private val goods: List<GoodModel>): RecyclerView.Adapter<Goo
         val binding = ItemGoodBinding.bind(itemView)
 
         fun bind(good: GoodModel) = with(binding){
-            img.setImageResource(good.img)
+            Glide.with(itemView.context).load(good.url).into(img)
+            //img.setImageResource(good.img)
             goodName.text = good.name
             price.text = good.price.toString()
         }

@@ -2,10 +2,8 @@ package com.example.cafe
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.cafe.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         val recV: RecyclerView = binding.recView
         recV.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         for (i in 0 .. 4){
-            listGoods.add(GoodModel(R.drawable.pancake, "Блины с ягодами и сгущенкой", 300))
-            listGoods.add(GoodModel(R.drawable.roll_cezar,"Цезарь ролл", 350))
-            listGoods.add(GoodModel(R.drawable.sandvich,"Американский сэндвич с тунцом", 150))
+            listGoods.add(GoodModel("Блины с ягодами и сгущенкой", 300, "https://vkusnoclub.ru/vypechka/bliny/pyshnye-zavarnye-bliny-s-yagodami-i-sguschenkoi/pyshnye-zavarnye-bliny-s-yagodami-i-sguschenkoi-ready0-retsept.jpg"))
+            listGoods.add(GoodModel("Цезарь ролл", 350, "https://static.1000.menu/res/640/img/content-v2/c4/42/16224/cezar-roll-s-kuricei_1590045640_16_max.jpg"))
+            listGoods.add(GoodModel("Американский сэндвич с тунцом", 150, "https://premiya.ua/img/recipes/recipe2_main.jpg"))
         }
         recV.adapter = GoodsAdapter(listGoods)
     }
